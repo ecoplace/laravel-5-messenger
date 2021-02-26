@@ -249,6 +249,7 @@ class Thread extends Eloquent
             Models::participant()->firstOrCreate([
                 'user_id' => $userId,
                 'thread_id' => $this->id,
+                'starred' => true
             ]);
         });
     }
